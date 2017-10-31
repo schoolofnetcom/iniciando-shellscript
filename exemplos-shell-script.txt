@@ -1,0 +1,133 @@
+Exemplo1:
+
+#!/bin/bash
+#Exibindo nome de usuario
+echo "Seu nome de usuario e:"
+whoami
+#Exibindo a hora atual
+echo "Informacao de hora atual"
+uptime
+echo "O meu script esta sendo executado no diretorio"
+pwd
+
+Exemplo2
+
+#!/bin/bash
+site=www.schoolofnet.com
+meu_time_favorito=flamengo
+_cidade=Blumenau
+echo "Um ótimo site para aprender programacao e:" $site
+echo "Eu torco para o:" $meu_time_favorito
+echo "Eu moro em:" $_cidade
+echo "Eu sou instrutor:" $site
+
+Exemplo3
+
+#!/bin/bash
+system_info=$(df-h) #Passando saida para a variavel
+echo "$system_info"
+
+Exemplo4
+
+#!/bin/bash
+echo "Qual o nome da sua distro favorita"
+read nome_distro;
+echo "Você gosta da distro $nome_distro"
+
+Exemplo5
+
+#!/bin/bash
+echo "Digite um numero qualquer"
+read numero;
+if [ "$numero" -gt 20 ]
+then
+echo "Este numero e maior que 20"
+else
+echo "Este numero nao e maior que 20"
+fi
+
+Exemplo6
+
+#!/bin/bash
+echo "Selecione uma opcao:"
+echo "1 - Exibir data e hora do sistema"
+echo "2 - Exibir o resultado da divisao 10/2"
+echo "3 - Exibir uma mensagem"
+read opcao;
+if [ $opcao == "1" ];
+then 
+ data=$(date +"%T, %d/%m/%y, %A")
+ echo "$data"
+elif [ $opcao == "2" ];
+then
+ resultado=$((10/2))
+ echo "divisao de 10/2 e = $resultado"
+elif [ $opcao == "3" ];
+ then
+  echo "Informe o seu nome"
+  read nome;
+  echo "Seu nome e: $nome"
+fi
+
+Exemplo7
+
+#!/bin/bash
+echo "Selecione uma opcao:"
+echo "1 - Exibir data e hora do sistema"
+echo "2 - Exibir o resultado da divisao 10/2"
+echo "3 - Exibir uma mensagem"
+read opcao;
+case $opcao in
+"1")
+ data=$(date +"%T, %d/%m/%y, %A")
+ echo "$data"
+;;
+"2")
+ resultado=$((10/2))
+ echo "divisao de 10/2 e = $resultado"
+;;
+"3")
+ then
+  echo "Informe o seu nome"
+  read nome;
+  echo "Seu nome e: $nome"
+;; 
+esac
+
+
+Exemplo8
+
+#!/bin/bash
+echo "Testando loop for"
+for i in (10..0);
+do
+ echo "$i"
+done
+
+#!/bin/bash
+echo "Testando loop for"
+for i in $(seq 1 5 100);
+do
+ echo "$i"
+done
+
+Exemplo 9
+
+#!/bin/bash
+
+echo "Informe o que voce quiser, -1 para sair"
+read dado;
+while [ $dado != "-1" ];
+do
+ echo "Voce digitou $dado"
+read dado;
+done;
+
+echo "Informe ate que o valor positivo e maior que )"
+read valor;
+i=1
+while [ $i le $valor ];
+do
+ echo "$i"
+((i=$i+1))
+done;
