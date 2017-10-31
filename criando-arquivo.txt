@@ -1,0 +1,10 @@
+Para criar um arquivo, além do famigerado comando "touch":
+
+touch nomeDoArquivo.txt
+
+Você pode utilizar o sinal > para criar arquivos da seguinte forma:
+
+>nomeDoArquivo.txt
+
+Você deve ter permissões de criação, caso contrário não funcionará.
+
